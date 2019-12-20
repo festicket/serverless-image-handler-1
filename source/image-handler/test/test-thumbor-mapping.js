@@ -30,12 +30,12 @@ describe('process()', function() {
             thumborMapping.process(event);
             // Assert
             const expectedResult = {
-                edits: { 
+                edits: {
+                    grayscale: true,
                     resize: {
                         width: 200,
-                        height: 300
+                        height: 300,
                     },
-                    grayscale: true
                 }
             };
             assert.deepEqual(thumborMapping.edits, expectedResult.edits);
